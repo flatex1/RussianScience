@@ -69,7 +69,7 @@ header,
 .header__inner::after {
     content: "";
     width: 100%;
-    border: 1px solid white;
+    border: 1px solid white !important;
     border-radius: 25px;
 }
 
