@@ -21,7 +21,7 @@ body {
 }
 
 ._header-container {
-    max-width: 45vw;
+    max-width: 75vw;
     margin: 0 auto;
     padding: 1.2em 1.2em 0 1.2em;
 }
@@ -40,7 +40,7 @@ body {
 
 .header {
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 header,
@@ -57,6 +57,11 @@ header,
     justify-content: space-between;
     gap: 15px 101px;
     flex-wrap: wrap;
+}
+
+.header__inner--title {
+    font-size: 1.5em;
+    font-weight: 900;
 }
 
 ._header-button {
@@ -82,14 +87,52 @@ header,
 
 }
 
-.hero_inner--section-1 {
-    display: flex;
+.parallax-images {
     position: relative;
-    background: url(../img/hero_inner_bg.png) no-repeat top center;
+    width: 100vw;
     height: 100vh;
     top: -9vh;
-    align-items: end;
-    background-size: cover;
+    left: 0;
+}
+
+.parallax-images__item {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+.parallax-images__item-first {
+    
+    position: relative;
+    background: url(../img/hero_inner_bg-text.png) top / cover no-repeat;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.parallax-images__item-second {
+    
+    position: relative;
+    background: url(../img/hero_inner_bg-vavilov.png) top / cover no-repeat;
+    left: 74vh; 
+    top: 4.3vh; 
+    width: 54vw; 
+    height: 100%; 
+    z-index: 4;
+}
+
+.parallax-images__item-third {
+    
+    position: relative;
+    background: url(../img/hero_inner_bg-item.png) top / cover no-repeat;
+    left: 15vh; 
+    top: 25vh; 
+    width: 26vw; 
+    height: 61%;
+       z-index: 2;
+    
+
 }
 
 .hero_inner--section-1 p {
