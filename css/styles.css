@@ -1,0 +1,106 @@
+/* Шрифты */
+
+@font-face {
+    font-family: Moniqa;
+    src: url(../fonts/Moniqa-BlackDisplay.ttf);
+}
+
+@font-face {
+    font-family: Random;
+    src: url(../fonts/RG-SpaciousBook.ttf);
+}
+
+/* Общие стили */
+
+body {
+    background: #202020;
+    font-size: 1.2em;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+._header-container {
+    max-width: 45vw;
+    margin: 0 auto;
+    padding: 1.2em 1.2em 0 1.2em;
+}
+
+._hero-container {
+    max-width: 80vw;
+    margin: 0 auto;
+    padding: 0 1.2em 1.2em 1.2em;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+/* Шапка (header) */
+
+.header {
+    position: relative;
+    z-index: 2;
+}
+
+header,
+.hero :where(a, p) {
+    color: #fff;
+    font-family: Random;
+
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    align-content: flex-start;
+    justify-content: space-between;
+    gap: 15px 101px;
+    flex-wrap: wrap;
+}
+
+._header-button {
+    padding: 0.5em;
+    border: 2px solid white;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.header__inner::after {
+    content: "";
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 25px;
+}
+
+/* Основная секция (hero) */
+
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.hero_inner--section-1 {
+    display: flex;
+    position: relative;
+    background: url(../img/hero_inner_bg.png) no-repeat top center;
+    height: 100vh;
+    top: -9vh;
+    align-items: end;
+    background-size: cover;
+}
+
+.hero_inner--section-1 p {
+    font-size: 10.895vw;
+    font-family: Moniqa;
+    font-weight: 900;
+    word-wrap: break-word;
+    line-height: 12.9vh;
+}
+
+
+
+
+/* Подвал (footer) */
