@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: Moniqa;
-    src: url(./fonts/Moniqa-BlackDisplay.ttf);
+    src: url(../fonts/Moniqa-BlackDisplay.ttf);
 }
 
 @font-face {
     font-family: Random;
-    src: url(./fonts/RG-SpaciousBook.ttf);
+    src: url(../fonts/RG-SpaciousBook.ttf);
 }
 
 /* Общие стили */
@@ -61,7 +61,7 @@ header,
 
 ._header-button {
     padding: 0.5em;
-    border: 2px solid white;
+    border: 2px solid #fff;
     border-radius: 25px;
     cursor: pointer;
 }
@@ -69,7 +69,7 @@ header,
 .header__inner::after {
     content: "";
     width: 100%;
-    border: 1px solid white !important;
+    border: 1px solid #fff !important;
     border-radius: 25px;
 }
 
