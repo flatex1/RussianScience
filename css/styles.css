@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: Moniqa;
-    src: url(../fonts/Moniqa-BlackDisplay.ttf);
+    src: url(./fonts/Moniqa-BlackDisplay.ttf);
 }
 
 @font-face {
     font-family: Random;
-    src: url(../fonts/RG-SpaciousBook.ttf);
+    src: url(./fonts/RG-SpaciousBook.ttf);
 }
 
 /* Общие стили */
