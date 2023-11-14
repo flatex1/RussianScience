@@ -4,9 +4,8 @@
 
 let tl = gsap.timeline();
 
-tl.from('.header', {opacity: 0, duration: 2})
-.from('.hero', {opacity: 0, duration: 0.7}, "-=1.7");
-
+tl.from('.header', {opacity: 0, duration: 0.7})
+.from('.section-1 p', {opacity: 0, duration: 0.7});
 // JavaScript Parallax
 
 window.onload = function () {
