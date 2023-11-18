@@ -4,10 +4,52 @@
 
 let tl = gsap.timeline();
 
-tl.from('.header', {opacity: 0, duration: 0.7})
-.from('.section-1 p', {opacity: 0, duration: 0.7});
-// JavaScript Parallax
+const main = document.querySelector('.main');
 
+tl.fromTo(
+    '.header',
+    {
+        y: -100,
+        opacity: 0,
+    },
+    {
+        y: 0,
+        opacity: 1,
+        duration: 1
+    });
+
+gsap.fromTo('.ep-2__text-top', {xPercent: -30}, {
+    scrollTrigger: {
+        trigger:'.ep-2',
+        start: 'top bottom',
+        scrub: true
+    },
+    xPercent: 10
+});
+
+gsap.fromTo('.ep-2__text-bottom', {xPercent: 30}, {
+    scrollTrigger: {
+        trigger:'.ep-2',       
+        start: 'top bottom',
+        scrub: true
+    },
+    xPercent: -10
+});
+
+// tl.fromTo('.ep-3', {y: 0}, {
+//     scrollTrigger: {
+//         trigger: '.ep-2',
+//         start: 'top top',
+//         end: () => main.offsetWidth,
+//         scrub: true,
+//         markers: true,
+//         pin: true
+//     },
+//     y: '-100%'
+// })
+
+// JavaScript Parallax
+/*
 window.onload = function () {
     const parallax = document.querySelector('.parallax-images');
 
@@ -56,4 +98,8 @@ window.onload = function () {
             coordYprocent = coordY / parallaxHeight * 100;
         });
     }
-}
+
+
+};
+
+*/
