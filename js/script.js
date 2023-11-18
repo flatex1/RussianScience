@@ -36,17 +36,17 @@ gsap.fromTo('.ep-2__text-bottom', {xPercent: 30}, {
     xPercent: -10
 });
 
-// tl.fromTo('.ep-3', {y: 0}, {
-//     scrollTrigger: {
-//         trigger: '.ep-2',
-//         start: 'top top',
-//         end: () => main.offsetWidth,
-//         scrub: true,
-//         markers: true,
-//         pin: true
-//     },
-//     y: '-100%'
-// })
+tl.fromTo('.ep-3', {y: 0}, {
+    scrollTrigger: {
+        trigger: '.ep-2',
+        start: 'top top',
+        end: () => main.offsetWidth,
+        scrub: true,
+        markers: true,
+        pin: true
+    },
+    y: '-100%'
+})
 
 // JavaScript Parallax
 /*
