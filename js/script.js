@@ -2,9 +2,12 @@
 
 // GSAP Animation
 
+window.onload = function () {
+
 let tl = gsap.timeline();
 
 const main = document.querySelector('.main');
+const p3 = document.querySelector('.ep-3');
 
 tl.fromTo(
     '.header',
@@ -36,23 +39,24 @@ gsap.fromTo('.ep-2__text-bottom', {xPercent: 30}, {
     xPercent: -10
 });
 
-tl.fromTo('.ep-3', {y: 0}, {
-    scrollTrigger: {
-        trigger: '.ep-2',
-        start: 'top top',
-        end: () => main.offsetWidth,
-        scrub: true,
-        pin: true
-    },
-    y: '-100%'
-});
+// gsap.fromTo('.ep-3', {y: 0}, {
+//     scrollTrigger: {
+//         trigger: '.ep-2',
+//         start: 'top top',
+//         end: () => main.offsetWidth,
+//         scrub: true,
+//         pin: true
+//     },
+//     y: '-100%'
+// });
 
-tl.fromTo('.ep-4', {scale: 0.05}, {
+gsap.fromTo('.ep-4', {scale: 0.05}, {
     scrollTrigger: {
         trigger: '.ep-3',
-        start: 'top top',
+        start: "top",
         end: () => main.offsetHeight,
-        scrub: true,       
+        scrub: true,
+        markers: true,      
         pin: true
     },
     scale: 1,
@@ -70,7 +74,7 @@ tl.fromTo('.ep-4', {scale: 0.05}, {
 //     opacity: 0
 // });
 
-tl.fromTo('.cloud-1', {xPercent: -20, yPercent: -20}, {
+gsap.fromTo('.cloud-1', {xPercent: -20, yPercent: -20}, {
     scrollTrigger: {
         trigger: '.ep-5',
         start: 'top center',
@@ -80,17 +84,16 @@ tl.fromTo('.cloud-1', {xPercent: -20, yPercent: -20}, {
     xPercent: 35
 });
 
-tl.fromTo('.cloud-2', {xPercent: 20}, {
+gsap.fromTo('.cloud-2', {xPercent: 20}, {
     scrollTrigger: {
         trigger: '.ep-5',
         start: 'top center',
         end: () => main.offsetHeight,
         scrub: true,
-        markers: true
     },
     xPercent: -35
 });
-
+};
 // JavaScript Parallax
 /*
 window.onload = function () {

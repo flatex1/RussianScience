@@ -320,6 +320,8 @@ body::-webkit-scrollbar-thumb {
     max-height: 2870px;
 
     transform: translateY(-103.5vh);
+
+    overflow: hidden;
 }
 
 .ep-5__text {
