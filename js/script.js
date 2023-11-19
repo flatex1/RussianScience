@@ -52,16 +52,44 @@ tl.fromTo('.ep-4', {scale: 0.05}, {
         trigger: '.ep-3',
         start: 'top top',
         end: () => main.offsetHeight,
-        scrub: true,
-        markers: true,
+        scrub: true,       
         pin: true
     },
     scale: 1,
     width: '100%',
     height: '100%',
     translateX: '8.9%'
-})
+});
 
+// tl.fromTo('.ep-4', {opacity: 1}, {
+//     scrollTrigger: {
+//         trigger: '.ep-3',
+//         start: 'top center',
+//         scrub: true
+//     },
+//     opacity: 0
+// });
+
+tl.fromTo('.cloud-1', {xPercent: -20, yPercent: -20}, {
+    scrollTrigger: {
+        trigger: '.ep-5',
+        start: 'top center',
+        end: () => main.offsetHeight,
+        scrub: true,
+    },
+    xPercent: 35
+});
+
+tl.fromTo('.cloud-2', {xPercent: 20}, {
+    scrollTrigger: {
+        trigger: '.ep-5',
+        start: 'top center',
+        end: () => main.offsetHeight,
+        scrub: true,
+        markers: true
+    },
+    xPercent: -35
+});
 
 // JavaScript Parallax
 /*

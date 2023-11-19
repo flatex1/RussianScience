@@ -13,7 +13,7 @@
 .grain {
     position: absolute;
     width: 100%;
-    height: 700vh;
+    height: 1000vh;
     z-index: 1;
     opacity: 0.07;
     background: url(../img/noise.gif) center repeat;
@@ -37,6 +37,11 @@
 }
 
 @font-face {
+    font-family: MoniqaParagraph;
+    src: url(../fonts/Moniqa-Paragraph.ttf);
+}
+
+@font-face {
     font-family: SanFranciscoRegular;
     src: url(../fonts/SFUIText-Regular.woff);
 }
@@ -49,13 +54,9 @@
 /* Общие стили */
 
 body {
-
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-image: url(../img/noise.gif);
-    background-size: auto !important;
-    background-repeat: repeat !important;
 }
 
 body::-webkit-scrollbar {
@@ -78,6 +79,7 @@ body::-webkit-scrollbar-thumb {
 
 .main {
     position: relative;
+    
     background: var(--bg-dark-color);
 }
 
@@ -106,7 +108,7 @@ body::-webkit-scrollbar-thumb {
 
     cursor: default;
 
-    z-index: 1000;
+    z-index: 100;
 }
 
 .header::after {
@@ -304,6 +306,72 @@ body::-webkit-scrollbar-thumb {
 
     color: var(--bg-light-color);
     transform: translate(calc(-10% + 8vh), calc(100% + 10vw));
+}
+
+/* ----------- 5 БЛОК  ----------- */
+
+.ep-5 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--bg-light-color);
+    height: 160vh;
+    max-height: 2870px;
+
+    transform: translateY(-103.5vh);
+}
+
+.ep-5__text {
+    
+    width: 100%;
+    max-width: 60%;
+    margin: 0 auto;
+
+    color: #4B4B4B;
+
+    text-align: justify;
+    font-family: MoniqaParagraph;
+    font-size: 3em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    margin-top: -30px;
+    padding-top: 170px; 
+}
+
+.cloud-1, .cloud-2 {
+    position: absolute;
+    top: calc(50% - 190px);
+}
+
+.cloud-1 {
+    left: 0;
+    z-index: 3;
+}
+
+.cloud-2 {
+    right: 0; 
+}
+
+.ep-5__bg {
+    display: flex;
+    flex: 0 0 10%;
+    width: 100%;
+
+    z-index: 2;
+}
+
+/* ----------- 6 БЛОК  ----------- */
+
+.ep-6 {
+    background-color: var(--bg-dark-color);
+    height: 80vh;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 /* ----------- KEYFRAMES  ----------- */
