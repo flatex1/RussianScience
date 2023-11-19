@@ -142,8 +142,6 @@ body::-webkit-scrollbar-thumb {
     border-radius: 0px 0px 150px 150px;
 }
 
-
-
 .ep-1__title {
     font-family: Moniqa;
     font-size: 13em;
@@ -174,8 +172,6 @@ body::-webkit-scrollbar-thumb {
 
 /* ----------- 2 БЛОК  ----------- */
 
-
-
 .ep-2 {
     position: relative;
     height: 100vh;
@@ -193,15 +189,7 @@ body::-webkit-scrollbar-thumb {
     line-height: normal;
 }
 
-.lighten-layer {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #222;
-    background-blend-mode: lighten;
-}
-
-/* ----------- 2 БЛОК  ----------- */
+/* ----------- 3 БЛОК  ----------- */
 
 .ep-3 {
     position: relative;
@@ -213,15 +201,6 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
     margin: -30px 0;
     padding: 30px 0;
-}
-
-.ep-3__map {
-    position: absolute;
-    display: flex;
-    align-content: flex-end;
-    width: 80%;
-    bottom: 0;
-    right: auto;
 }
 
 .line__inner {
@@ -249,6 +228,82 @@ body::-webkit-scrollbar-thumb {
     flex-shrink: 0;
 
     animation: line 28s linear infinite;
+}
+
+.ep-3__map {
+    position: absolute;
+    display: flex;
+    align-content: flex-end;
+    width: 80%;
+    bottom: 0;
+    left: 10%;
+}
+
+.ep-3 :where(.ep-3__area-info, .ep-3__city-name) {
+    font-family: SanFranciscoRegular;
+
+    z-index: 3;
+}
+
+.ep-3__area-info {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 1.5em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.item-area {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+    z-index: 3;
+
+    position: absolute;
+    left: calc(75vw - 338px);
+    top: calc(33vh + 15px);
+}
+
+.ep-3__city-name {
+    position: absolute;
+
+    color: #545454;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    bottom: calc(50vh + 20px);
+    left: calc(50vw - 103px);
+}
+
+
+/* ----------- 4 БЛОК  ----------- */
+
+.ep-4 {
+    position: absolute;
+    height: 100%;
+    background: url(../img/memorial_vavilov.png) center / cover no-repeat;
+    width: 100%;
+    top: 0;
+    left: -18vh;
+    scale: 0.05;
+
+    z-index: 5;
+}
+
+.ep-4__text {
+    display: flex;
+    justify-content: flex-end;
+
+    font-size: 2em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+
+    color: var(--bg-light-color);
+    transform: translate(calc(-10% + 8vh), calc(100% + 10vw));
 }
 
 /* ----------- KEYFRAMES  ----------- */
@@ -294,7 +349,9 @@ body::-webkit-scrollbar-thumb {
     0% {
         transform: translateX(-100%);
     }
+
     100% {
-        transform: translate3d(100%, 0, 0);;
+        transform: translate3d(100%, 0, 0);
+        ;
     }
 }

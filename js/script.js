@@ -42,11 +42,26 @@ tl.fromTo('.ep-3', {y: 0}, {
         start: 'top top',
         end: () => main.offsetWidth,
         scrub: true,
-        markers: true,
         pin: true
     },
     y: '-100%'
+});
+
+tl.fromTo('.ep-4', {scale: 0.05}, {
+    scrollTrigger: {
+        trigger: '.ep-3',
+        start: 'top top',
+        end: () => main.offsetHeight,
+        scrub: true,
+        markers: true,
+        pin: true
+    },
+    scale: 1,
+    width: '100%',
+    height: '100%',
+    translateX: '8.9%'
 })
+
 
 // JavaScript Parallax
 /*
