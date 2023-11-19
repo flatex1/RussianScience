@@ -79,7 +79,7 @@ body::-webkit-scrollbar-thumb {
 
 .main {
     position: relative;
-    
+
     background: var(--bg-dark-color);
 }
 
@@ -325,7 +325,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .ep-5__text {
-    
+
     width: 100%;
     max-width: 60%;
     margin: 0 auto;
@@ -340,10 +340,11 @@ body::-webkit-scrollbar-thumb {
     line-height: normal;
 
     margin-top: -30px;
-    padding-top: 170px; 
+    padding-top: 170px;
 }
 
-.cloud-1, .cloud-2 {
+.cloud-1,
+.cloud-2 {
     position: absolute;
     top: calc(50% - 190px);
 }
@@ -354,7 +355,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .cloud-2 {
-    right: 0; 
+    right: 0;
 }
 
 .ep-5__bg {
@@ -368,13 +369,100 @@ body::-webkit-scrollbar-thumb {
 /* ----------- 6 БЛОК  ----------- */
 
 .ep-6 {
-    background-color: var(--bg-dark-color);
+    background: url(../img/Vavilov_family.png) center no-repeat;
     height: 80vh;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
+    align-items: center;
+
+    position: relative;
+    top: -110vh;
+
+    overflow: hidden;
 }
+
+.ep-6__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.ep-6__title {
+    color: #DCE1DB;
+
+    text-align: justify;
+    font-family: Moniqa;
+    font-size: 12.5em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+/* ----------- 7 БЛОК  ----------- */
+
+.ep-7 {
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--bg-light-color);
+
+    height: 50vh;
+    top: -100vh;
+
+    padding: 100px 0px;
+    margin: -20px 0px;
+}
+
+.ep-7__box {
+    display: flex;
+    width: 30%;
+    height: 90%;
+
+    flex-shrink: 0;
+
+    border-radius: 50px;
+    background: url(../img/vavilov-gif.gif) center / cover no-repeat, #383838;
+    background-blend-mode: screen, normal;
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    color: #DCE1DB;
+
+    text-align: center;
+    font-family: SanFranciscoRegular, sans-serif;
+    font-size: 2.3125em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    
+}
+
+/* ----------- 8 БЛОК  ----------- */
+
+.ep-8 {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    background: var(--bg-light-color);
+
+    
+
+    top: -100vh;
+}
+
+
 
 /* ----------- KEYFRAMES  ----------- */
 

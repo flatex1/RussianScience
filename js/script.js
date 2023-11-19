@@ -7,7 +7,7 @@ window.onload = function () {
 let tl = gsap.timeline();
 
 const main = document.querySelector('.main');
-const p3 = document.querySelector('.ep-3');
+const ep6 = document.querySelector('.ep-6');
 
 tl.fromTo(
     '.header',
@@ -55,8 +55,7 @@ gsap.fromTo('.ep-4', {scale: 0.05}, {
         trigger: '.ep-3',
         start: "top",
         end: () => main.offsetHeight,
-        scrub: true,
-        markers: true,      
+        scrub: true,    
         pin: true
     },
     scale: 1,
@@ -93,6 +92,48 @@ gsap.fromTo('.cloud-2', {xPercent: 20}, {
     },
     xPercent: -35
 });
+
+gsap.fromTo('.ep-6__title', {xPercent: 30}, {
+    scrollTrigger: {
+        trigger: '.ep-6',
+        start: 'top bottom',
+        end: () => main.offsetWidth * 5,
+        scrub: true
+    },
+    xPercent: -30
+});
+
+gsap.fromTo('.ep-6__item-left', {xPercent: -200, yPercent:-270}, {
+    scrollTrigger: {
+        trigger:'.ep-6',
+        start: 'top 80%',
+        
+        scrub: true,
+
+    },
+    yPercent: 0
+});
+gsap.fromTo('.ep-6__item-center', {yPercent:-100}, {
+    scrollTrigger: {
+        trigger:'.ep-6',
+        start: 'top bottom',
+        
+        scrub: true,
+        
+    },
+    yPercent: 140
+});
+gsap.fromTo('.ep-6__item-right', {xPercent: 200, yPercent:-270}, {
+    scrollTrigger: {
+        trigger:'.ep-6',
+        start: 'top bottom',
+        
+        scrub: true,
+        
+    },
+    yPercent: 120
+});
+
 };
 // JavaScript Parallax
 /*
