@@ -11,7 +11,7 @@ RussianScience - это веб-сайт, посвящённый жизни и н
 Визуализация его научных экспедиций и исследований.
 # Технологии:
 
-HTML, CSS, JavaScript (GreenSock + ScrollTrigger)
+HTML, CSS, JavaScript (GreenSock + ScrollTrigger, mobile-detect.js)
 
 # Целевая аудитория:
 Учёные, студенты, преподаватели, и любые интересующиеся историей науки и биологии.
