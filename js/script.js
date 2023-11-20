@@ -93,14 +93,14 @@ gsap.fromTo('.cloud-2', {xPercent: 20}, {
     xPercent: -35
 });
 
-gsap.fromTo('.ep-6__title', {xPercent: 30}, {
+gsap.fromTo('.ep-6__title', {xPercent: 40}, {
     scrollTrigger: {
         trigger: '.ep-6',
         start: 'top bottom',
-        end: () => main.offsetWidth * 5,
+        
         scrub: true
     },
-    xPercent: -30
+    xPercent: -20
 });
 
 gsap.fromTo('.ep-6__item-left', {xPercent: -200, yPercent:-270}, {
