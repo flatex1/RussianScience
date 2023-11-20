@@ -485,6 +485,10 @@ body::-webkit-scrollbar-thumb {
     max-width: 60%;
 }
 
+.ep-8__title span {
+    color: var(--darken-text-color);
+}
+
 /* ----------- KEYFRAMES  ----------- */
 
 @keyframes an_1 {
