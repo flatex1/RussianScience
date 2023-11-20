@@ -1,138 +1,156 @@
 "use strict"
 
+// Подключаем библиотеку mobile-detect.js
+var md = new MobileDetect(window.navigator.userAgent);
+
 // GSAP Animation
 
 window.onload = function () {
 
-let tl = gsap.timeline();
+    let tl = gsap.timeline();
 
-const main = document.querySelector('.main');
-const ep6 = document.querySelector('.ep-6');
+    const main = document.querySelector('.main');
+    const ep6 = document.querySelector('.ep-6');
 
-tl.fromTo(
-    '.header',
-    {
-        y: -100,
-        opacity: 0,
-    },
-    {
-        y: 0,
-        opacity: 1,
-        duration: 1
+    tl.fromTo(
+        '.header',
+        {
+            y: -100,
+            opacity: 0,
+        },
+        {
+            y: 0,
+            opacity: 1,
+            duration: 1
+        });
+
+    if (!md.mobile()) {
+        // Пользователь **не** с мобильного устройства
+        gsap.fromTo('.ep-2__text-top', { xPercent: -30 }, {
+            scrollTrigger: {
+                trigger: '.ep-2',
+                start: 'top bottom',
+                scrub: true
+            },
+            xPercent: 10
+        });
+
+        gsap.fromTo('.ep-2__text-bottom', { xPercent: 30 }, {
+            scrollTrigger: {
+                trigger: '.ep-2',
+                start: 'top bottom',
+                scrub: true
+            },
+            xPercent: -10
+        });
+    }
+
+
+
+    // gsap.fromTo('.ep-3', {y: 0}, {
+    //     scrollTrigger: {
+    //         trigger: '.ep-2',
+    //         start: 'top top',
+    //         end: () => main.offsetWidth,
+    //         scrub: true,
+    //         pin: true
+    //     },
+    //     y: '-100%'
+    // });
+
+    gsap.fromTo('.ep-4', { scale: 0.05 }, {
+        scrollTrigger: {
+            trigger: '.ep-3',
+            start: "top top",
+            end: () => main.offsetHeight,
+            scrub: true,
+            pin: true
+        },
+        scale: 1.05,
+        top: '0',
+        left: '0'
     });
 
-gsap.fromTo('.ep-2__text-top', {xPercent: -30}, {
-    scrollTrigger: {
-        trigger:'.ep-2',
-        start: 'top bottom',
-        scrub: true
-    },
-    xPercent: 10
-});
+    gsap.fromTo('.ep-4__text', {yPercent: 800, opacity: 0}, {
+        scrollTrigger: {
+            trigger: '.ep-3',
+            start: "top 80%",
+            end: () => main.offsetHeight,
+            scrub: true
+        },
+        yPercent: 0,
+        opacity: 1
+    })
 
-gsap.fromTo('.ep-2__text-bottom', {xPercent: 30}, {
-    scrollTrigger: {
-        trigger:'.ep-2',       
-        start: 'top bottom',
-        scrub: true
-    },
-    xPercent: -10
-});
+    // tl.fromTo('.ep-4', {opacity: 1}, {
+    //     scrollTrigger: {
+    //         trigger: '.ep-3',
+    //         start: 'top center',
+    //         scrub: true
+    //     },
+    //     opacity: 0
+    // });
 
-// gsap.fromTo('.ep-3', {y: 0}, {
-//     scrollTrigger: {
-//         trigger: '.ep-2',
-//         start: 'top top',
-//         end: () => main.offsetWidth,
-//         scrub: true,
-//         pin: true
-//     },
-//     y: '-100%'
-// });
+    gsap.fromTo('.cloud-1', { xPercent: -20, yPercent: -20 }, {
+        scrollTrigger: {
+            trigger: '.ep-5',
+            start: 'top center',
+            end: () => main.offsetHeight,
+            scrub: true,
+        },
+        xPercent: 35
+    });
 
-gsap.fromTo('.ep-4', {scale: 0.05}, {
-    scrollTrigger: {
-        trigger: '.ep-3',
-        start: "top",
-        end: () => main.offsetHeight,
-        scrub: true,    
-        pin: true
-    },
-    scale: 1,
-    width: '100%',
-    height: '100%',
-    translateX: '8.9%'
-});
+    gsap.fromTo('.cloud-2', { xPercent: 20 }, {
+        scrollTrigger: {
+            trigger: '.ep-5',
+            start: 'top center',
+            end: () => main.offsetHeight,
+            scrub: true,
+        },
+        xPercent: -35
+    });
 
-// tl.fromTo('.ep-4', {opacity: 1}, {
-//     scrollTrigger: {
-//         trigger: '.ep-3',
-//         start: 'top center',
-//         scrub: true
-//     },
-//     opacity: 0
-// });
+    gsap.fromTo('.ep-6__title', { xPercent: 40 }, {
+        scrollTrigger: {
+            trigger: '.ep-6',
+            start: 'top bottom',
 
-gsap.fromTo('.cloud-1', {xPercent: -20, yPercent: -20}, {
-    scrollTrigger: {
-        trigger: '.ep-5',
-        start: 'top center',
-        end: () => main.offsetHeight,
-        scrub: true,
-    },
-    xPercent: 35
-});
+            scrub: true
+        },
+        xPercent: -20
+    });
 
-gsap.fromTo('.cloud-2', {xPercent: 20}, {
-    scrollTrigger: {
-        trigger: '.ep-5',
-        start: 'top center',
-        end: () => main.offsetHeight,
-        scrub: true,
-    },
-    xPercent: -35
-});
+    gsap.fromTo('.ep-6__item-left', { xPercent: -200, yPercent: -270 }, {
+        scrollTrigger: {
+            trigger: '.ep-6',
+            start: 'top 80%',
 
-gsap.fromTo('.ep-6__title', {xPercent: 40}, {
-    scrollTrigger: {
-        trigger: '.ep-6',
-        start: 'top bottom',
-        
-        scrub: true
-    },
-    xPercent: -20
-});
+            scrub: true,
 
-gsap.fromTo('.ep-6__item-left', {xPercent: -200, yPercent:-270}, {
-    scrollTrigger: {
-        trigger:'.ep-6',
-        start: 'top 80%',
-        
-        scrub: true,
+        },
+        yPercent: 0
+    });
+    gsap.fromTo('.ep-6__item-center', { yPercent: -100 }, {
+        scrollTrigger: {
+            trigger: '.ep-6',
+            start: 'top bottom',
 
-    },
-    yPercent: 0
-});
-gsap.fromTo('.ep-6__item-center', {yPercent:-100}, {
-    scrollTrigger: {
-        trigger:'.ep-6',
-        start: 'top bottom',
-        
-        scrub: true,
-        
-    },
-    yPercent: 140
-});
-gsap.fromTo('.ep-6__item-right', {xPercent: 200, yPercent:-270}, {
-    scrollTrigger: {
-        trigger:'.ep-6',
-        start: 'top bottom',
-        
-        scrub: true,
-        
-    },
-    yPercent: 120
-});
+            scrub: true,
+
+        },
+        yPercent: 140
+    });
+    gsap.fromTo('.ep-6__item-right', { xPercent: 200, yPercent: -270 }, {
+        scrollTrigger: {
+            trigger: '.ep-6',
+            start: 'top bottom',
+
+            scrub: true,
+
+        },
+        yPercent: 120
+    });
 
 };
 // JavaScript Parallax

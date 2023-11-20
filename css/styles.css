@@ -79,7 +79,7 @@ body::-webkit-scrollbar-thumb {
 
 .main {
     position: relative;
-overflow: hidden;
+    overflow: hidden;
     background: var(--bg-dark-color);
 }
 
@@ -319,7 +319,7 @@ overflow: hidden;
     height: 160vh;
     max-height: 2870px;
 
-    transform: translateY(-103.5vh);
+    top: -103.5vh;
 
     overflow: hidden;
 }
@@ -446,7 +446,7 @@ overflow: hidden;
     font-weight: 400;
     line-height: normal;
 
-    
+
 }
 
 /* ----------- 8 БЛОК  ----------- */
@@ -457,7 +457,7 @@ overflow: hidden;
     height: 100vh;
     background: var(--bg-light-color);
 
-    
+
 
     top: -100vh;
 }
@@ -523,6 +523,7 @@ overflow: hidden;
     .ep-1__title {
         font-size: 9em;
     }
+
     .ep-1__subtitle {
         font-size: 1.65em;
     }
@@ -531,22 +532,35 @@ overflow: hidden;
 @media screen and (width < 66.813em) {
     .header {
         flex-wrap: nowrap;
-        
+
     }
+
     .header__title {
         order: 1;
     }
+
     .header::after {
         display: none;
     }
+
     .header__button {
         order: 3;
     }
 }
 
-@media screen and (width < 47.875em) {
-    
-    
+@media screen and (width < 25.8125em) {
+    .header {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .header__button {
+        display: none;
+    }
+
+    .ep-1__title {
+        font-size: 7em;
+    }
 }
 
 /* -------- MEDIA 2 БЛОК  -------- */
@@ -564,6 +578,16 @@ overflow: hidden;
     }
 }
 
+@media screen and (width < 25.8125em) {
+    .ep-2 {
+        text-align: center;
+        font-size: 3.5em;
+    }
+
+    .ep-2 :where(.ep-2__text-top, .ep-2__text-bottom) {
+        width: 90%;
+    }
+}
 
 /* -------- MEDIA 3 БЛОК  -------- */
 
@@ -580,7 +604,23 @@ overflow: hidden;
     }
 }
 
+@media screen and (width < 25.8125em) {
+    .area-info {
+        right: 5vh;
+        left: unset;
+        top: unset;
+    }
 
+    .ep-3__map {
+        top: -15vh;
+        scale: 1.5;
+    }
+
+    .ep-3__city-name {
+        right: 20vh;
+        top: 31%;
+    }
+}
 
 /* -------- MEDIA 4 БЛОК  -------- */
 
@@ -596,6 +636,17 @@ overflow: hidden;
     }
 }
 
+@media screen and (width < 25.8125em) {
+    .ep-4 {
+        top: -18%;
+    }
+
+    .ep-4__text {
+        position: relative;
+        right: -25%;
+        bottom: -50%
+    }
+}
 
 /* -------- MEDIA 5 БЛОК  -------- */
 
@@ -605,7 +656,24 @@ overflow: hidden;
     }
 }
 
-
+@media screen and (width < 25.8125em) {
+    .ep-5 {
+        height: 100%;      
+    }
+    .ep-5__text {
+        max-width: 80%;
+        font-size: 2.5em;
+    }
+    .ep-5 :where(.cloud-1, .cloud-2) {
+        opacity: 0.8;
+    }
+    .cloud-1 {
+        top: 55%;
+    }
+    .cloud-2 {
+        top: 15%;
+    }
+}
 
 
 /* -------- MEDIA 6 БЛОК  -------- */
@@ -614,6 +682,7 @@ overflow: hidden;
     .ep-6 {
         background: url(../img/Vavilov_family.png) center / 50% no-repeat;
     }
+
     .ep-6__title {
         font-size: 8em;
     }
@@ -623,3 +692,9 @@ overflow: hidden;
 
 
 /* -------- MEDIA 7 БЛОК  -------- */
+
+@media screen and (width < 25.8125em) {
+    .ep-7 {
+        display: none;
+    }
+}
