@@ -13,7 +13,7 @@
 .grain {
     position: absolute;
     width: 100%;
-    height: 1300vh;
+    height: 1995vh;
     z-index: 1;
     opacity: 0.07;
     background: url(../img/noise.gif) center repeat;
@@ -28,7 +28,12 @@
 
 @font-face {
     font-family: Moniqa500;
-    src: url(..//fonts/Moniqa-LightParagraph.ttf);
+    src: url(../fonts/Moniqa-LightParagraph.ttf);
+}
+
+@font-face {
+    font-family: Moniqa500Italic;
+    src: url(../fonts/Moniqa-ItalicParagraph.ttf);
 }
 
 @font-face {
@@ -86,6 +91,7 @@ body::-webkit-scrollbar-thumb {
     position: relative;
     overflow: hidden;
     background: var(--bg-dark-color);
+    height: 1994vh;
 }
 
 .header {
@@ -324,7 +330,7 @@ body::-webkit-scrollbar-thumb {
     height: 160vh;
     max-height: 2870px;
 
-    top: -103.5vh;
+    /* top: -103.5vh; */
 
     overflow: hidden;
 }
@@ -384,7 +390,7 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
 
     position: relative;
-    top: -110vh;
+    /* top: -110vh; */
 
     overflow: hidden;
 }
@@ -421,7 +427,7 @@ body::-webkit-scrollbar-thumb {
     background: var(--bg-light-color);
 
     height: 50vh;
-    top: -100vh;
+    /* top: -100vh; */
 
     padding: 100px 0px;
     margin: -20px 0px;
@@ -432,8 +438,6 @@ body::-webkit-scrollbar-thumb {
     width: 30%;
     height: 90%;
 
-    flex-shrink: 0;
-
     border-radius: 50px;
     background: url(../img/vavilov-gif.gif) center / cover no-repeat, #383838;
     background-blend-mode: screen, normal;
@@ -441,9 +445,11 @@ body::-webkit-scrollbar-thumb {
     text-align: center;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
 
     color: #DCE1DB;
 
+    position: relative;
     text-align: center;
     font-family: SanFranciscoRegular, sans-serif;
     font-size: 2.3125em;
@@ -451,7 +457,7 @@ body::-webkit-scrollbar-thumb {
     font-weight: 400;
     line-height: normal;
 
-
+    z-index: 2;
 }
 
 /* ----------- 8 БЛОК  ----------- */
@@ -459,13 +465,15 @@ body::-webkit-scrollbar-thumb {
 .ep-8 {
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
+    align-items: center;
     text-align: center;
-    height: 100vh;
+    min-height: 100vh;
     background: var(--bg-light-color);
 
-    top: -100vh;
+    /* top: -100vh; */
 
     padding: 50px 0px;
     margin: -20px 0px;
@@ -489,6 +497,487 @@ body::-webkit-scrollbar-thumb {
     color: var(--darken-text-color);
 }
 
+.ep-8__split-pic {
+    display: flex;
+    gap: 0 5vh;
+
+    max-height: 50%;
+    margin: -20px -10px;
+    padding: 40px 10px;
+}
+
+.ep-8__parents {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    width: 70%;
+
+    margin: -20px 0;
+    padding: 40px 0;
+
+    color: #666;
+    font-family: SanFranciscoRegular, sans-serif;
+    font-size: 1.25em;
+    text-align: justify;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.ep-8__father-ep {
+    display: flex;
+    align-items: center;
+    gap: 10%;
+}
+
+.ep-8__father-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.ep-8__mother-ep {
+    display: flex;
+    align-items: center;
+
+    gap: 3%;
+}
+
+.ep-8__mother-block {
+    display: flex;
+    flex-direction: column;
+    padding: 0 4vw;
+
+
+}
+
+.father-block__text {
+    margin-left: -20px;
+    padding: 0 10vw;
+}
+
+.mother-svg {
+    padding-left: 3em;
+}
+
+.mother-block__text {
+    padding-left: 14vw;
+}
+
+.ep-8__quote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.quote-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+
+    border-radius: 50px;
+    border: 1px solid #666;
+
+    padding: 5em 0;
+    margin: 100px 0;
+}
+
+.quote-box__main-text {
+    color: #000;
+
+    text-align: center;
+    font-family: Moniqa500;
+    font-size: 4em;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 115.551%;
+    text-transform: none;
+    max-width: 70%;
+}
+
+.quote-box__bottom-text {
+    color: #666;
+
+    text-align: justify;
+    font-family: SanFranciscoRegular, sans-serif;
+    font-size: 1.25em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    max-width: 70%;
+}
+
+/* ----------- 9 БЛОК  ----------- */
+
+.ep-9 {
+    background: url(../img/Vavilov_work.png) center no-repeat;
+    height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    position: relative;
+    /* top: -98vh; */
+
+    overflow: hidden;
+}
+
+.ep-9__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.ep-9__title {
+    color: #DCE1DB;
+
+    text-align: justify;
+    font-family: Moniqa;
+    font-size: 12.5em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+/* ----------- 10 БЛОК  ----------- */
+
+.ep-10 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    /* top: -98vh; */
+    padding-bottom: 10vh;
+    background-color: var(--bg-light-color);
+}
+
+.ep-10 :where(.ep-10__journey-1, .ep-10__journey-2) {
+    width: 70%;
+    text-align: center;
+}
+
+.ep-10__journey-1 {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: -20px;
+    padding-top: 6em;
+    align-items: center;
+}
+
+.ep-10__title {
+    color: #4B4B4B;
+
+    text-align: justify;
+    font-family: Moniqa500;
+    font-size: 3em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.03em;
+}
+
+.ep-10__collections {
+    display: flex;
+    gap: 5%;
+
+    padding: 13% 0;
+    margin: -5% 0;
+
+
+}
+
+.ep-10__subtitle {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    background: url(../img/ep-10-subtitle-bg.svg) center / contain no-repeat;
+
+    color: #666;
+
+    font-family: SanFranciscoRegular;
+    font-size: 1.25em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+
+    width: 50%;
+    height: 40vh;
+}
+
+.ep-10__journey-2 {
+    display: flex;
+
+    gap: 18vh;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 80% !important;
+    flex-direction: row;
+
+    padding-top: 20vh;
+    margin-top: -10vh;
+}
+
+.ep-10__subblock-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ep-10__subblock-text {
+    color: #4B4B4B;
+    text-align: justify;
+    font-family: SanFranciscoRegular;
+    font-size: 1.5em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.24px;
+}
+
+.ep-10__subblock-right {
+    display: flex;
+    flex-direction: row;
+    gap: 5vh;
+}
+
+/* ----------- 11 БЛОК  ----------- */
+
+.ep-11 {
+    background: url(../img/Vavilov_prison.png) center no-repeat;
+    height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    position: relative;
+    /* top: -98vh; */
+
+    overflow: hidden;
+}
+
+.ep-11__title {
+    color: #DCE1DB;
+
+    text-align: justify;
+    font-family: Moniqa;
+    font-size: 12.5em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+/* ----------- 12 БЛОК  ----------- */
+
+.ep-12 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--bg-light-color);
+
+    /* top: -98vh; */
+}
+
+.ep-12__critique {
+    display: flex;
+    flex-direction: column;
+
+    width: 70%;
+
+    color: #4B4B4B;
+    text-align: justify;
+    font-family: Moniqa500;
+    font-size: 3em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.48px;
+}
+
+.ep-12__critique p {
+    margin: -50px 0;
+    padding: 20vh 0;
+}
+
+.ep-12__critique p>span {
+    font-family: Moniqa500Italic;
+}
+
+.ep-12__arrest {
+    display: flex;
+    flex-direction: column;
+}
+
+.ep-12__arrest_top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.ep-12__arrest_top span {
+    color: #666;
+    text-align: justify;
+    font-family: SanFranciscoRegular;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 200.484%;
+    /* 40.097px */
+    text-transform: uppercase;
+
+    width: 35%;
+}
+
+.ep-12__arrest_bottom {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5vh;
+
+    margin-bottom: -30px;
+    padding-bottom: 15vh;
+}
+
+.ep-12__quote {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--bg-dark-color) !important;
+    background: url(../img/ep-12-quote.png) center / 50% no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    color: var(--light-text-color);
+    font-family: Moniqa500;
+    font-size: 5em;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+
+}
+
+.ep-12__final {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 5vh;
+
+    margin-top: -50px;
+    padding-top: 15vh;
+}
+
+.ep-12__header {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 70%;
+    gap: 5vh;
+}
+
+.ep-12__title {
+    color: var(--bg-dark-color);
+    text-align: center;
+    font-family: MoniqaParagraph;
+    font-size: 7em;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.ep-12__title span {
+    color: #ABABAB;
+}
+
+.ep-12__subtitle {
+    color: #666;
+    text-align: center;
+    font-family: SanFranciscoRegular;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150.96%;
+    /* 30.192px */
+    text-transform: uppercase;
+    width: 80%;
+}
+
+.ep-12__speech-image {
+    display: flex;
+    gap: 5vh;
+    width: 80%;
+    justify-content: center;
+}
+
+.ep-12__final-text {
+    padding: 10vh;
+    
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    border-radius: 50px;
+    border: 1px solid #666;
+
+    padding: 5em 0;
+    margin: 100px 0;
+
+    color: #000;
+    text-align: center;
+    font-family: Moniqa500;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 115.551%;
+    /* 73.953px */
+    max-width: 70%;
+
+    padding: 10vh !important;
+}
+
+.ep-12__final-text span {
+    color: #ABABAB;
+}
+
+.ep-12__final-text p {
+    width: 80%;
+    margin: 0 auto;
+}
 /* ----------- KEYFRAMES  ----------- */
 
 @keyframes an_1 {
@@ -724,6 +1213,14 @@ body::-webkit-scrollbar-thumb {
 
 @media screen and (width < 25.8125em) {
     .ep-7 {
+        display: none;
+    }
+}
+
+/* -------- MEDIA 7 БЛОК  -------- */
+
+@media screen and (width < 25.8125em) {
+    .ep-8 {
         display: none;
     }
 }

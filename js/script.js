@@ -62,7 +62,7 @@ window.onload = function () {
         scrollTrigger: {
             trigger: '.ep-3',
             start: "top top",
-            end: () => main.offsetHeight,
+            end: () => main.offsetHeight / 4,
             scrub: true,
             pin: true
         },
@@ -71,11 +71,11 @@ window.onload = function () {
         left: '0'
     });
 
-    gsap.fromTo('.ep-4__text', {yPercent: 800, opacity: 0}, {
+    gsap.fromTo('.ep-4__text', { yPercent: 800, opacity: 0 }, {
         scrollTrigger: {
             trigger: '.ep-3',
             start: "top 80%",
-            end: () => main.offsetHeight,
+            end: () => main.offsetHeight / 4,
             scrub: true
         },
         yPercent: 0,
@@ -135,7 +135,6 @@ window.onload = function () {
         scrollTrigger: {
             trigger: '.ep-6',
             start: 'top bottom',
-
             scrub: true,
 
         },
@@ -145,14 +144,99 @@ window.onload = function () {
         scrollTrigger: {
             trigger: '.ep-6',
             start: 'top bottom',
-
             scrub: true,
 
         },
         yPercent: 120
     });
 
+    if (!md.mobile()) {
+        gsap.fromTo('.ep-7__box', { scale: 1, height: '90%' }, {
+            scrollTrigger: {
+                trigger: '.ep-7',
+                start: 'top 15%',
+                scrub: true,
+            },
+            scale: '0.15',
+            width: '23%',
+            height: '120%',
+            top: '49vh',
+            right: '37vh'
+        });
+        gsap.fromTo('.ep-7__box span', { opacity: 1 }, {
+            scrollTrigger: {
+                trigger: '.ep-7',
+                start: 'top 15%',
+                scrub: true,
+            },
+            opacity: 0
+        });
+        gsap.fromTo('.ep-8__split-pic-1', { yPercent: 100 }, {
+            scrollTrigger: {
+                trigger: '.ep-8__title',
+                start: 'top 20%',
+                scrub: true,
+            },
+            yPercent: 0
+        });
+        gsap.fromTo('.ep-8__split-pic-2', { yPercent: 100 }, {
+            scrollTrigger: {
+                trigger: '.ep-8__title',
+                start: 'top 10%',
+                scrub: true,
+            },
+            yPercent: 0
+        });
+        gsap.fromTo('.ep-8__split-pic-3', { yPercent: 100 }, {
+            scrollTrigger: {
+                trigger: '.ep-8__title',
+                start: 'top',
+                scrub: true,
+            },
+            yPercent: 0
+        });
+    }
+    else {
+        const element = document.querySelector('.ep-8__title');
+        if (element) {
+            element.innerHTML = 'Николай Вавилов родился <span>25 ноября 1887 года</span>в Москве в семье купца. С детства проявлял любопытство к природе, проводя часы в саду, изучая растения';
+        } else {
+            console.error('.ep-8__title не найден.');
+        }
+    }
+
+    // на этом месте должна быть (!) анимация (появление информации о отце и матери Вавилова)
+
+    gsap.fromTo('.ep-9__title', { xPercent: 40 }, {
+        scrollTrigger: {
+            trigger: '.ep-9',
+            start: 'top bottom',
+            scrub: true
+        },
+        xPercent: -20
+    });
+
+    gsap.fromTo('.ep-9__item-left', { xPercent: -200, yPercent: -270 }, {
+        scrollTrigger: {
+            trigger: '.ep-9',
+            start: 'top 80%',
+            scrub: true,
+        },
+        yPercent: 0
+    });
+
+    gsap.fromTo('.ep-9__item-right', { xPercent: 200, yPercent: -270 }, {
+        scrollTrigger: {
+            trigger: '.ep-9',
+            start: 'top bottom',
+            scrub: true,
+        },
+        yPercent: 120
+    });
+
 };
+
+
 // JavaScript Parallax
 /*
 window.onload = function () {
