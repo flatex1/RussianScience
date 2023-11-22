@@ -1,5 +1,20 @@
 "use strict"
 
+// Проверка загрузки всех изображений
+Promise.all(Array.from(document.images).map(img => {
+    if (img.complete)
+        return Promise.resolve(img.naturalHeight !== 0);
+    return new Promise(resolve => {
+        img.addEventListener('load', () => resolve(true));
+        img.addEventListener('error', () => resolve(false));
+    });
+})).then(results => {
+    if (results.every(res => res))
+        console.log('all images loaded successfully');
+    else
+        console.log('some images failed to load, all finished loading');
+});
+
 // Подключаем библиотеку mobile-detect.js
 var md = new MobileDetect(window.navigator.userAgent);
 
@@ -195,6 +210,25 @@ window.onload = function () {
             },
             yPercent: 0
         });
+        gsap.fromTo('.father-block__text', {yPercent: -50, opacity: 0}, {
+            scrollTrigger: {
+                trigger: '.ep-8__father-ep',
+                start: 'top bottom',
+                scrub: true,
+            },
+            opacity: 1,
+            yPercent: 10
+        });
+        gsap.fromTo('.mother-block__text', {yPercent: -50, opacity: 0}, {
+            scrollTrigger: {
+                trigger: '.ep-8__mother-ep',
+                start: 'top bottom',
+                scrub: true
+            },
+            opacity: 1,
+            yPercent: 10
+        });
+
     }
     else {
         const element = document.querySelector('.ep-8__title');
@@ -205,7 +239,7 @@ window.onload = function () {
         }
     }
 
-    // на этом месте должна быть (!) анимация (появление информации о отце и матери Вавилова)
+    
 
     gsap.fromTo('.ep-9__title', { xPercent: 40 }, {
         scrollTrigger: {
