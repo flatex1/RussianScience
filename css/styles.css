@@ -91,7 +91,6 @@ body::-webkit-scrollbar-thumb {
     position: relative;
     overflow: hidden;
     background: var(--bg-dark-color);
-    height: 1994vh;
 }
 
 .header {
@@ -483,7 +482,7 @@ body::-webkit-scrollbar-thumb {
     color: var(--bg-dark-color);
     text-align: center;
     font-family: Moniqa500;
-    font-size: 128px;
+    font-size: 12vmin;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -946,7 +945,7 @@ body::-webkit-scrollbar-thumb {
 
 .ep-12__final-text {
     padding: 10vh;
-    
+
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -978,6 +977,7 @@ body::-webkit-scrollbar-thumb {
     width: 80%;
     margin: 0 auto;
 }
+
 /* ----------- KEYFRAMES  ----------- */
 
 @keyframes an_1 {
@@ -1171,10 +1171,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (width < 25.8125em) {
-    .ep-5 {
-        height: 100%;
-    }
-
     .ep-5__text {
         max-width: 80%;
         font-size: 2.5em;
@@ -1185,7 +1181,7 @@ body::-webkit-scrollbar-thumb {
     }
 
     .cloud-1 {
-        top: 55%;
+        top: 25%;
     }
 
     .cloud-2 {
@@ -1206,7 +1202,11 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-
+@media screen and (width < 25.8125em) {
+    .ep-6__title {
+        font-size: 5em;
+    }
+}
 
 
 /* -------- MEDIA 7 БЛОК  -------- */
@@ -1217,10 +1217,83 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-/* -------- MEDIA 7 БЛОК  -------- */
+/* -------- MEDIA 8 БЛОК  -------- */
 
 @media screen and (width < 25.8125em) {
-    .ep-8 {
-        display: none;
+
+    .ep-8__father-ep,
+    .ep-8__mother-ep {
+        align-items: center;
+        align-content: center;
+        row-gap: 5vh;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .ep-8__father-block>img {
+        width: 80%;
+    }
+
+    .ep-8__mother-ep>img {
+        width: 80%;
+        order: 1;
+    }
+
+    .ep-8__mother-block {
+        order: 2;
+    }
+
+    .quote-box {
+        font-size: x-small;
+    }
+}
+
+/* -------- MEDIA 9 БЛОК  -------- */
+
+@media screen and (width < 25.8125em) {
+    .ep-9 {
+        font-size: xx-small;
+    }
+}
+
+/* -------- MEDIA 10 БЛОК  -------- */
+
+@media screen and (width < 25.8125em) {
+    .ep-10__journey-1 {
+        font-size: small;
+    }
+
+    .ep-10__subblock-left {
+        width: 90%;
+    }
+}
+
+/* -------- MEDIA 11 БЛОК  -------- */
+
+@media screen and (width < 25.8125em) {
+    .ep-11 {
+        font-size: xx-small;
+    }
+}
+
+/* -------- MEDIA 12 БЛОК  -------- */
+
+@media screen and (width < 25.8125em) {
+    .ep-12__quote {
+        font-size: xxx-large;
+        text-align: center;
+    }
+
+    .ep-12__title {
+        width: 38%;
+        font-size: 3em;
+    }
+    .ep-12__subtitle {
+        width: 38%;
+        font-size: 1em;
+    }
+    .ep-12__final-text {
+        max-width: 30%;
+        font-size: 10vmin;
     }
 }
