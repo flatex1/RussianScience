@@ -106,12 +106,14 @@ window.onload = function () {
     //     opacity: 0
     // });
 
+if(!md.mobile) {
     gsap.fromTo('.cloud-1', { xPercent: -20, yPercent: -20 }, {
         scrollTrigger: {
             trigger: '.ep-5',
             start: 'top center',
-            end: () => main.offsetHeight,
+            end: () => main.offsetHeight / 3,
             scrub: true,
+            markers: true
         },
         xPercent: 35
     });
@@ -120,7 +122,7 @@ window.onload = function () {
         scrollTrigger: {
             trigger: '.ep-5',
             start: 'top center',
-            end: () => main.offsetHeight,
+            end: () => main.offsetHeight / 3,
             scrub: true,
         },
         xPercent: -35
@@ -135,6 +137,30 @@ window.onload = function () {
         },
         xPercent: -20
     });
+}
+else {
+    gsap.fromTo('.cloud-1', { xPercent: 10, yPercent: -20 }, {
+        scrollTrigger: {
+            trigger: '.ep-5',
+            start: 'top 85%',
+            
+            scrub: true,
+        },
+        xPercent: -25,
+    });
+
+    gsap.fromTo('.cloud-2', { xPercent: -10, yPercent: 90 }, {
+        scrollTrigger: {
+            trigger: '.ep-5',
+            start: 'top 85%',
+            
+            scrub: true,
+        },
+        xPercent: 25
+    });
+}
+
+    
 
     gsap.fromTo('.ep-6__item-left', { xPercent: -200, yPercent: -270 }, {
         scrollTrigger: {

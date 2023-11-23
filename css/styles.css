@@ -326,7 +326,6 @@ body::-webkit-scrollbar-thumb {
     flex-direction: column;
 
     background-color: var(--bg-light-color);
-    height: 160vh;
     max-height: 2870px;
 
     /* top: -103.5vh; */
@@ -395,6 +394,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .ep-6__items {
+    position: absolute;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1204,7 +1204,11 @@ body::-webkit-scrollbar-thumb {
 
 @media screen and (width < 25.8125em) {
     .ep-6__title {
-        font-size: 5em;
+        font-size: 4em;
+    }
+
+    .ep-6 {
+        background: url(../img/Vavilov_family.png) center / 93% no-repeat;
     }
 }
 
@@ -1245,6 +1249,22 @@ body::-webkit-scrollbar-thumb {
 
     .quote-box {
         font-size: x-small;
+    }
+
+    .ep-8__title {
+        max-width: 80%;
+        font-size: 5vmin;
+        font-family: SanFranciscoRegular, sans-serif;
+    }
+
+    .ep-8__split-pic {
+        justify-content: center;
+    }
+    .ep-8__split-pic :where(.ep-8__split-pic-1, .ep-8__split-pic-3) {
+        display: none;
+    }
+    .ep-8__split-pic-2 {
+        width: 85%;
     }
 }
 
@@ -1288,10 +1308,12 @@ body::-webkit-scrollbar-thumb {
         width: 38%;
         font-size: 3em;
     }
+
     .ep-12__subtitle {
         width: 38%;
         font-size: 1em;
     }
+
     .ep-12__final-text {
         max-width: 30%;
         font-size: 10vmin;
@@ -1308,9 +1330,9 @@ body::-webkit-scrollbar-thumb {
     bottom: 0;
     background: #e0e0e0;
     z-index: 1001;
-  }
-  
-  .preloader__row {
+}
+
+.preloader__row {
     position: relative;
     top: 50%;
     left: 50%;
@@ -1320,9 +1342,9 @@ body::-webkit-scrollbar-thumb {
     margin-left: -35px;
     text-align: center;
     animation: preloader-rotate 2s infinite linear;
-  }
-  
-  .preloader__item {
+}
+
+.preloader__item {
     position: absolute;
     display: inline-block;
     top: 0;
@@ -1331,37 +1353,37 @@ body::-webkit-scrollbar-thumb {
     width: 35px;
     height: 35px;
     animation: preloader-bounce 2s infinite ease-in-out;
-  }
-  
-  .preloader__item:last-child {
+}
+
+.preloader__item:last-child {
     top: auto;
     bottom: 0;
     animation-delay: -1s;
-  }
-  
-  @keyframes preloader-rotate {
+}
+
+@keyframes preloader-rotate {
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
-  
-  @keyframes preloader-bounce {
-  
+}
+
+@keyframes preloader-bounce {
+
     0%,
     100% {
-      transform: scale(0);
+        transform: scale(0);
     }
-  
+
     50% {
-      transform: scale(1);
+        transform: scale(1);
     }
-  }
-  
-  .loaded_hiding .preloader {
+}
+
+.loaded_hiding .preloader {
     transition: 0.3s opacity;
     opacity: 0;
-  }
-  
-  .loaded .preloader {
+}
+
+.loaded .preloader {
     display: none;
-  }
+}
